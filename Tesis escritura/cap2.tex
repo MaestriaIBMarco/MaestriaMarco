@@ -3,10 +3,10 @@
  
 \chapterquote{In retrospect, Euler's unintended message is very simple: Graphs or networks have properties, hidden in their construction, that limit or enhance our ability to do things with them.}{Albert-László Barabási, 1982}
  
-\label{Redes de interacción entre tortugas}
+\label{Redes de interaccion entre tortugas}
 \section{Trayectorias }
  
-Primero se muestran las trayectorias obtenidas para un día de medición (Fig.~\ref{fig:trayeSinFiltr}), como por ejemplo 1/12/2020. Para éstas se realizó un programa en el lenguaje Python utilizando la librería Folium, permitiendo añadir puntos de GPS al mapa \cite{github}.
+Primero se muestran las trayectorias obtenidas para un día de medición (Fig.~\ref{fig:trayeSinFiltr}), como por ejemplo 1/12/2020. Para éstas \LGM{sin acento} se realizó un programa en el lenguaje Python utilizando la librería Folium, permitiendo añadir puntos de GPS al mapa \cite{github}.
  
 \begin{figure}[ht]
     \begin{center}
@@ -14,15 +14,15 @@ Primero se muestran las trayectorias obtenidas para un día de medición (Fig.~\
    
     \includegraphics[width=\imsize]{Chap2/Traye1_12_sinF.png}
 \end{center}
-    \caption[Trayectorias un dia de medición, sin filtrar.]{Trayectorias del 1/12/2020, cada color representa una tortuga diferente. Ambas metodologías fueron implementadas, algunos puntos tomados con el tortugómetro escapan a la trayectoria esperada.}
+    \caption[Trayectorias un dia de medición, sin filtrar.]{Trayectorias del 1/12/2020, \LGM{punto y coma en vez de la coma, o si no agregar 'donde'} cada color representa una tortuga diferente. Ambas metodologías fueron implementadas, \LGM{punto y coma o punto y seguido} algunos puntos tomados con el tortugómetro escapan a la trayectoria esperada.}
     \label{fig:trayeSinFiltr}
 \end{figure}
-Se observa en la Fig.~\ref{fig:trayeSinFiltr}, que algunos puntos tomados por el tortugómetro se desvían de la trayectoria esperada para una tortuga (recorren distancias del orden de los kilómetros en menos de 10 minutos). Se estima que estas desviaciones se producen por dos motivos: en primer lugar, en los primeros minutos de medición, el GPS comienza a conectarse a satélites hasta tener la precisión máxima, haciendo que  los primeros puntos tengan una mayor desviación; en segundo lugar, se observó de manera aleatoria la desviación de algún punto respecto de la trayectoria típica.
+Se observa en la Fig.~\ref{fig:trayeSinFiltr}, que algunos puntos tomados por el tortugómetro se desvían de la trayectoria esperada para una tortuga (recorren distancias del orden de los kilómetros en menos de 10 minutos). Se estima que estas desviaciones se producen por dos motivos: en primer lugar, en los primeros minutos de medición, el GPS comienza a conectarse a satélites hasta tener la precisión máxima, haciendo que  los primeros puntos tengan una mayor desviación; \LGM{bien este punto y coma!} en segundo lugar, se observó de manera aleatoria la desviación de algún punto respecto de la trayectoria típica.
  
  
  
  
-Para corregir estas desviaciones, se implementó un método basado en la velocidad máxima que pueden alcanzar los individuos. El mismo está detallado en el repositorio de GitHub, archivo \textit{CriterioParaSacarData.py} \cite{github}. Para obtener la velocidad máxima, se calculó la distribución de velocidades de la Fig.~\ref{fig:distribuciondeVel}.
+Para corregir estas desviaciones, se implementó un método basado en la velocidad máxima que pueden alcanzar los individuos. El mismo está detallado en el repositorio de GitHub, archivo \textit{CriterioParaSacarData.py} \cite{github}. Para obtener la velocidad máxima, \LGM{sin la coma} se calculó la distribución de velocidades de la Fig.~\ref{fig:distribuciondeVel}.
  
  
 \begin{figure}[ht]
@@ -30,7 +30,7 @@ Para corregir estas desviaciones, se implementó un método basado en la velocid
        
    
     \includegraphics[width=\imsize]{Chap2/Velocidades2.jpeg}
-    \caption[Distribución de velocidades.]{Histograma de velocidades en m/min. Las  velocidades obtenidas mayores a 15 m/min están órdenes de magnitud por encima.}
+    \caption[Distribución de velocidades.]{Histograma de velocidades en m/min. Las  velocidades obtenidas mayores a 15 m/min están órdenes de magnitud por encima. \LGM{Solo si es fácil rehacer la figura: no sería mejor poner 'Frecuencia' en vez de Repeticiones? Además, agregar un espacio entre V y los corchetes.}}
     \label{fig:distribuciondeVel}
 \end{center}
 \end{figure}
@@ -45,12 +45,12 @@ Se observó en la distribución de velocidades de la Fig.~\ref{fig:distribuciond
    
     \includegraphics[width=\imsize]{Chap2/Traye1_12_conF.png}
 \end{center}
-    \caption[Trayectorias un dia de medición, después del filtrado.]{Trayectorias del 1/12/2020 luego del filtrado, cada color representa una tortuga diferente.}
+    \caption[Trayectorias un dia de medición, después del filtrado.]{Trayectorias del 1/12/2020 luego del filtrado, \LGM{idem antes, usar ;} cada color representa una tortuga diferente.}
     \label{fig:trayeConFiltr}
 \end{figure}
  
 \section{Zonas de interés}
-Partiendo de las trayectorias filtradas, se realizó  una grilla identificando las zonas de recurrencia en la Fig.~\ref{fig:grilla1}. La misma es de gran interés para la investigación y preservación de la especie, en caso que se pudieran identificar los factores o características de las zonas más recurridas, se podrían sugerir políticas de manejo para minimizar los daños sobre las tortugas. Esto es especialmente importante dado que ahora se está introduciendo ganado en la zona con el consiguiente deterioro del hábitat natural de las tortugas. La grilla fue programada en Python y asigna la cantidad de posiciones medidas por el GPS en cada celda \cite{github}.
+Partiendo de las trayectorias filtradas, se realizó  una grilla identificando las zonas de recurrencia en la Fig.~\ref{fig:grilla1}. La misma es de gran interés para la investigación y preservación de la especie, \LGM{;} en caso \LGM{de (www.rae.es/dpd/queísmo)} que se pudieran identificar los factores o características de las zonas más recurridas, se podrían sugerir políticas de manejo para minimizar los daños sobre las tortugas. Esto es especialmente importante dado que ahora se está introduciendo ganado en la zona con el consiguiente deterioro del hábitat natural de las tortugas \LGM{se repite mucho 'las torugas'}. La grilla fue programada en Python y asigna la cantidad de posiciones medidas por el GPS en cada celda \cite{github}.
  
  
 \begin{figure}[ht]
@@ -73,19 +73,19 @@ Se puede observar en la Fig.~\ref{fig:grilla1} un punto que se destaca mucho má
     \label{fig:grillaInt}
 \end{figure}
  
-Comparando las Figs. \ref{fig:grilla1} y \ref{fig:grilla1}, se observa en la  Fig.~\ref{fig:grillaInt} un mayor contraste de las otras celdas respecto al que se encuentra arriba a la izquierda. Esto se debe a la extracción de los puntos nocturnos.  Si se puede obtener las características de las zonas de interés, se podrían sugerir políticas de manejo para minimizar los daños sobre las tortugas. Esto es especialmente importante dado que ahora se está introduciendo ganado en la zona con el consiguiente deterioro del hábitat natural de las tortugas.
+Comparando las Figs. \ref{fig:grilla1} y \ref{fig:grilla1}, se observa en la  Fig.~\ref{fig:grillaInt} un mayor contraste de las otras celdas respecto al que se encuentra arriba a la izquierda. Esto se debe a la extracción de los puntos nocturnos.  Si se puede \LGM{pudieran} obtener las características de las zonas de interés, se podrían sugerir políticas de manejo para minimizar los daños sobre las tortugas. Esto es especialmente importante dado que ahora se está introduciendo ganado en la zona con el consiguiente deterioro del hábitat natural de las tortugas \LGM{estas últimas dos frases están casi iguales en un párrado anterior, sacaría alguna de las dos instancias}.
  
 \section{Red de encuentros}
-Partiendo de las trayectorias filtradas, se decidió buscar el solapamiento de las trayectorias, para identificar los encuentros. Para ello, se implementó un código en Python, que partiendo de cualquier punto de su trayectoria busca si hay otro punto de otra tortuga que se encuentre a una distancia menor a 20 metros y a una distancia temporal menor a 20 minutos. Cuando se cumple esta condición se van guardando los pares de puntos junto con la hora y el nombre de ambas tortugas.
+Partiendo de las trayectorias filtradas, se decidió buscar el solapamiento de las trayectorias, para identificar los encuentros. Para ello, se implementó un código en Python, \LGM{sin coma} que \LGM{coma} partiendo de cualquier punto de su trayectoria \LGM{coma} busca si hay otro punto de otra tortuga que se encuentre a una distancia menor a 20 metros y a una distancia temporal menor a 20 minutos. Cuando se cumple esta condición se van guardando los pares de puntos junto con la hora y el nombre de ambas tortugas.
  
-En las Figs. \ref{fig:encuentros_hora_medida_tortugometro} y \ref{fig:encuentros_hora_medida_igotu}, están la cantidad de encuentros calculados por hora medida por los tortugómetros y por los i-gotU en función de los meses de medición. Los encuentros del tipo macho-hembra fueron normalizados por la cantidad promedio de horas medidas de ambos sexos para cada mes, en cambió para la cantidad de encuentros macho-macho y hembra-hembra se normalizo utilizando la cantidad de horas medidas para cada sexo en cada mes.  
+En las Figs. \ref{fig:encuentros_hora_medida_tortugometro} y \ref{fig:encuentros_hora_medida_igotu}, están la cantidad de encuentros calculados por hora medida por los tortugómetros y por los i-gotU en función de los meses de medición. Los encuentros del tipo macho-hembra fueron normalizados por la cantidad promedio de horas medidas de ambos sexos para cada mes, en cambió \LGM{sin acento} para la cantidad de encuentros macho-macho y hembra-hembra se normalizo \LGM{con acento} utilizando la cantidad de horas medidas para cada sexo en cada mes.  
 \begin{figure}[ht]
     \begin{center}
        
    
     \includegraphics[width=\imsize]{Chap2/encuentros_por_hora_tortugometro.pdf}
 \end{center}
-    \caption[Encuentros por hora medida tomando los datos del tortugometro.]{Encuentros sobre cantidad de horas medidas para cada sexo en función de los meses de medición utilizando el tortugometro.Los distintos colores identifican el tipo de encuentro.}
+    \caption[Encuentros por hora medida tomando los datos del tortugometro.]{Encuentros sobre cantidad de horas medidas para cada sexo en función de los meses de medición utilizando el tortugometro \LGM{con acento}. \LGM{espacio} Los distintos colores identifican el tipo de encuentro.}
     \label{fig:encuentros_hora_medida_tortugometro}
 \end{figure}
  
@@ -98,10 +98,10 @@ En las Figs. \ref{fig:encuentros_hora_medida_tortugometro} y \ref{fig:encuentros
     \caption[Encuentros por hora medida tomando los datos de los i-gotU.]{Encuentros sobre cantidad de horas medidas para cada sexo en función de los meses de medición utilizando los i-gotU. Los distintos colores identifican el tipo de encuentro.}
     \label{fig:encuentros_hora_medida_igotu}
 \end{figure}
-En la Fig. \ref{fig:encuentros_hora_medida_tortugometro}, se observa que el máximo de encuentros del tipo macho-hembra por hora medida está en los meses noviembre-diciembre, esto coincide con la época de apareamiento. Estos meses están juntos ya que las mediciones en esos meses fueron tomadas a finales de noviembre y principios de diciembre. Para el mes de enero solo se registraron encuentros del tipo hembra-hembra en ambas figuras ( \ref{fig:encuentros_hora_medida_tortugometro} y \ref{fig:encuentros_hora_medida_igotu}), esto puede deberse a que las hembras están buscando un lugar acorde para depositar sus huevos, haciendo el encuentro hembra-hembra más probable. Para los datos de los i-gotU (\ref{fig:encuentros_hora_medida_igotu}) también se registraron encuentros en los meses de febrero, marzo y abril, pero en menor cantidad que en los meses anteriores, asociamos esta diferencia a la disminución de actividad en las tortugas.
+En la Fig. \ref{fig:encuentros_hora_medida_tortugometro}, se observa que el máximo de encuentros del tipo macho-hembra por hora medida está en los meses noviembre-diciembre,\LGM{; (última vez que marco reemplazar una coma por punto y coma :) ... en general, el punto y coma va cuando dos frases estén bastante relacionadas, por ejemplo causa y consecuencia. Pero cada una tiene sujeto y predicado (o sea que podríam ser frases independientes, es decir se podría reemplazar el punto y coma por un punto). En cambio, cuando a una coma bien puesta se la reemplaza por un punto, se rompe o deteriora la gramática en alguna de las dos partes, o en ambas.} esto coincide con la época de apareamiento. Estos meses están juntos ya que las mediciones en esos meses fueron tomadas a finales de noviembre y principios de diciembre. Para el mes de enero solo se registraron encuentros del tipo hembra-hembra en ambas figuras ( \ref{fig:encuentros_hora_medida_tortugometro} y \ref{fig:encuentros_hora_medida_igotu}), esto puede deberse a que las hembras están buscando un lugar acorde para depositar sus huevos, haciendo el encuentro hembra-hembra más probable. Para los datos de los i-gotU (\ref{fig:encuentros_hora_medida_igotu}) también se registraron encuentros en los meses de febrero, marzo y abril, pero en menor cantidad que en los meses anteriores, asociamos esta diferencia a la disminución de actividad en las tortugas.
  
  
-Utilizando los encuentros calculados, se armaron dos redes de interacción  en la librería NetworkX \cite{networkx}, una para los datos obtenidos utilizando  tortugometro y otra para los datos provenientes de i-gotU (Figs. \ref{fig:redInteraccion20mincampanas} y \ref{fig:redInteraccion20igotu}). Las conexiones entre nodos tortugas tienen peso linealmente dependiente de la cantidad de encuentros entre ellas, esto se observa en el grosor del link entre dos tortugas y las distancias relativas entre nodos.
+Utilizando los encuentros calculados, se armaron dos redes de interacción  en la librería NetworkX \cite{networkx}, una para los datos obtenidos utilizando  tortugometro \LGM{acento} y otra para los datos provenientes de i-gotU (Figs. \ref{fig:redInteraccion20mincampanas} y \ref{fig:redInteraccion20igotu}). Las conexiones entre nodos tortugas tienen peso linealmente dependiente de la cantidad de encuentros entre ellas, esto se observa en el grosor del link entre dos tortugas y las distancias relativas entre nodos.
  
  
 \begin{figure}[ht]
@@ -110,7 +110,7 @@ Utilizando los encuentros calculados, se armaron dos redes de interacción  en l
    
     \includegraphics[width=\imsize]{Chap2/red_interaccion_20min_campanas.pdf}
 \end{center}
-    \caption[Red de encuentros entre tortugas  con datos tomados por el tortugometro.]{Red de encuentros entre tortugas para datos provenientes de la metodología  tortugometro. La condición de encuentro está dada por una distancia espacial menor a 20 metros y a una distancia temporal menor a 20 minutos. Los datos de tortugometros fueron tomados en distintas campañas en los meses de octubre, noviembre, diciembre y mediados de enero.}
+    \caption[Red de encuentros entre tortugas  con datos tomados por el tortugometro.]{Red de encuentros entre tortugas para datos provenientes de la metodología  tortugometro \LGM{acento, últmo que marco, revisá esta palabra en todo el documento}. La condición de encuentro está dada por una distancia espacial menor a 20 metros y a una distancia temporal menor a 20 minutos. Los datos de tortugometros fueron tomados en distintas campañas en los meses de octubre, noviembre, diciembre y mediados de enero.}
     \label{fig:redInteraccion20mincampanas}
 \end{figure}
  
@@ -127,9 +127,9 @@ Utilizando los encuentros calculados, se armaron dos redes de interacción  en l
 \end{figure}
  
  
-En la Fig. \ref{fig:redInteraccion20mincampanas}, se observa que la red de interacción está compuesta por dos comunidades. Sobre estas comunidades, se calcularon la media de las posiciones de cada nodo tortuga junto con su desviación estándar y no se encontraron diferencias significativas en estos valores para algunos pares de nodos tortugas pertenecientes a cada una de las comunidades. Esto nos indica que las tortugas que pertenecen a cada comunidad, no están separadas en el espacio y no es la causa de la separación de la red en dos comunidades. Queda a determinar en futuros trabajos si la separación de la red en estas dos comunidades está relacionada con alguna limitación de las mediciones o con alguna característica de la población de tortugas estudiada. En la red, también se observan diferencias en la distribución de grado, teniendo algunas tortugas muchas más conexiones que otras. Se seguirá trabajando para identificar comportamientos particulares de las tortugas que puedan estar relacionados con la distribución de grado de la red.
+En la Fig. \ref{fig:redInteraccion20mincampanas}, se observa que la red de interacción está compuesta por dos comunidades. Sobre estas comunidades, se calcularon la media de las posiciones de cada nodo tortuga junto con su desviación estándar y no se encontraron diferencias significativas en estos valores para algunos pares de nodos tortugas pertenecientes a cada una de las comunidades \LGM{medio rar esta frase, 'algunos'? qué quisiste decir?}. Esto nos indica que las tortugas que pertenecen a cada comunidad, \LGM{sin coma} no están separadas en el espacio y \LGM{, por lo tanto, esta} no es la causa de la separación de la red en dos comunidades. Queda a determinar en futuros trabajos si la separación de la red en estas dos comunidades está relacionada con alguna limitación de las mediciones o con alguna característica de la población de tortugas estudiada. En la red, también se observan diferencias en la distribución de grado \LGM{ojo, la distribución de grado es una sola (el histograma), el grado de cada tortuga es otra cosa, te referías al grado individual? Además: no estás mostrando la distribución, ni dando ningún valor de ejemplo para ilustrar este último punto, podrías hacer alguna de las dos cosas, o las dos :)}, teniendo algunas tortugas muchas más conexiones que otras. Se seguirá trabajando para identificar comportamientos particulares de las tortugas que puedan estar relacionados con la distribución de grado de la red.
  
-En la Fig. \ref{fig:redInteraccion20igotu}, se observa una mayor cantidad de encuentros entre las tortugas hembras (grosor del link), esto puede deberse a la época de medición, ya que en enero las tortugas hembras estan en busqueda de algún lugar para depositar sus huevos. En el siguiente capítulo se analizarán redes bipartitas de refugios y se comparan con las redes de interacción de tortugas.
+En la Fig. \ref{fig:redInteraccion20igotu}, se observa una mayor cantidad de encuentros entre las tortugas hembras (grosor del link \LGM{enlace?}), esto puede deberse a la época de medición, ya que en enero las tortugas hembras estan en busqueda de algún lugar para depositar sus huevos. En el siguiente capítulo se analizarán redes bipartitas de refugios y se comparan con las redes de interacción de tortugas \LGM{para entender mejor este aspecto, o algo así?}.
  
 %%% Local Variables:
 %%% mode: latex
