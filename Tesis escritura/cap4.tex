@@ -1,32 +1,143 @@
+
 \chapter{Conclusiones y trabajo a futuro}
+\kari{NOTA:como regla general no suelen ponerse referencias a tablas o figuras 
+en las conclusiones.\\}
+
+\kari{A partir de los resultados obtenidos en cada uno de los capítulos, 
+se pueden enumerar las siguientes conclusiones:\\}
+
+\begin{itemize}
+
+\item{    
+Se diseñó un algoritmo de reconstrucción de trayectorias que puede ser usado 
+con datos de GPS recopilados para cualquier especie, estimando la velocidad 
+máxima de la misma y descartando los datos que excedan dicho umbral de velocidad
+En particular para el caso 
+de la tortuga {\it Chelonoidis chilensis}, se encontró que la velocidad máxima es 
+de 14 m/min.} 
+
+\item{Se identificaron las zonas más visitadas por la población de tortugas, 
+lo que podría ser útil para diseñar políticas de conservación. 
+Estos mapas de recurrencias se diseñaron en un formato html 
+interactivo, para que puedan ser usados fácilmente por el equipo 
+interdisciplinario durante las campañas. Además estos mapas podrán ser actualizados 
+fácilmente a medida que se incorporen nuevas mediciones.}
  
-Se diseñó un algoritmo de reconstrucción de trayectorias, el mismo puede ser usado en cualquier especie indicando la velocidad máxima de la misma. Se encontró que la velocidad máxima de las tortugas es de 14 m/min. Fueron identificadas las zonas más visitadas por la población de tortugas estudiadas (Fig.~\ref{fig:grillaInt}), lo que podría ser útil para diseñar políticas de conservación. Los mapas de recurrencias podrán ser actualizados con nuevas mediciones y al devolver mapas en un formato html interactivo son de fácil uso para un trabajo interdisciplinario, en particular, durante las campañas.
+\item{Se obtuvieron redes de interacción entre tortugas y se computó 
+la cantidad de encuentros promedio para machos y hembras 
+en los distintos meses de medición. Se observa un máximo de encuentros 
+para 
+ambos sexos en el período noviembre-diciembre, donde el 85\% de los 
+encuentros registrados 
+fueron hembra-macho, lo que estaría asociado a la búsqueda 
+de pareja en la época de apareamiento. En cambio, en el mes de enero las 
+hembras presentan una mayor cantidad de encuentros promedio 
+por hora medida que los machos. Curiosamente todos los encuentros detectados
+en este período fueron hembra-hembra. Este resultado puede estar sesgado debido
+al escaso número de encuentros monitoreados (poner cuantos), o bien podría 
+estar relacionado con 
+la búsqueda que realizan las hembras, de un lugar para excavar y depositar sus 
+huevos. 
+Lamentablemente solo se contó con 8 tortugómetros y 6 i-gotU, para cada 
+día midiendo en simultáneo y es probable que parte de los 
+encuentros no hayan sido registrados. A partir de éste resultado, 
+se aumentará el número de pares de individuos 
+monitoreados para poder estudiar mas en profundidad la red de interacciones 
+entre las tortugas.
+} 
  
-Se obtuvieron redes  de interacción de individuos (Figs. \ref{fig:redInteraccion20mincampanas} y \ref{fig:redInteraccion20igotu}) y la cantidad de encuentros promedio para machos y hembras en los distintos meses de medición (Figs.~\ref{fig:encuentros_hora_medida_tortugometro} y \ref{fig:encuentros_hora_medida_igotu}). Se observa un pico para ambos sexos en noviembre-diciembre para los datos del tortugometro, donde el 85\% de los encuentros registrados fueron hembra-macho, éste puede estar asociado a la búsqueda de pareja en la época de apareamiento. En el mes de enero las hembras presentan una mayor cantidad de encuentros promedio por hora medida que los machos (para datos de i-gotU y tortugometro), esta observación se estima que puede estar relacionada a la búsqueda de un lugar para sus huevos. De todas maneras, solo se contaron con 8 tortugómetros y 6 i-gotU  para cada día midiendo en simultáneo y es probable que parte de los encuentros no hayan sido registrados. En un futuro se analizará la red de interacciones aumentando el número de pares de individuos monitoreados.
+\item{Se definieron dos criterios para determinar el refugio donde pasó la 
+noche la tortuga, uno para cada metodología de medición. Reconociendo las 
+limitaciones de estos criterios, se decidió para las próximas campañas de 
+medición, aumentar la franja horaria de medición para los datos de i-gotU, 
+de manera de garantizar la ubicación de la tortuga en el refugio nocturno. 
+Para el caso del tortugómetro se decidió añadir una etiqueta si la tortuga se 
+encuentra en su refugio nocturno a la hora de recuperar el dispositivo en ese 
+día de medición.}
+ 
+\item{Con los refugios ya identificados, se definió una métrica para 
+determinar la distribución espacial de los refugios para tortugas machos y 
+hembras. Se observó que el área cubierta por los refugios 
+no presenta diferencias significativas entre machos y hembras.
+En el futuro se utilizarán los nuevos datos colectados, utilizando el
+criterio del punto anterior, para estimar el area cubierta por los refugios, 
+separando en machos y hembras, así como también en los tres períodos de
+comportamiento (Nov-Dic, Enero, Feb-Abril). 
+}
+ 
+\item{Se descubrió la existencia de refugios preferidos donde la tortuga 
+pasa la mayoría de las noches. Esto solo pudo observarse en el período 
+Febrero-Abril, dado que solo en ese período se pudo identificar con 
+precisión la ubicación de los refugios. En particular se observó que 
+hacia el final del período mencionado, 
+la tortuga 
+parece elegir el refugio donde brumará durante el invierno, realizando 
+caminatas exploratorias desde el refugio preferido 
+hasta otro refugio nocturno y volviendo al refugio preferido. 
+En próximas campañas se continuará utilizando ésta metodología para 
+poder contrastar este resultado entre los tres períodos de comportamiento 
+anual. 
+Conocer la ubicación de estos refugios 
+preferidos puede ser útil para implementar medidas de 
+protección de los mismos, dado que se está comenzando 
+a introducir ganado en la zona, con el consiguiente 
+peligro de destrucción y fragmentación del habitat de 
+las tortugas. Además de contribuir a diseñar políticas
+de conservación, este resultado contribuye a la 
+caracterización del movimiento de las tortugas, y permitirá
+diseñar modelos matemáticos y simulaciones numéricas 
+inspiradas en los datos.}
+ 
+\item{Partiendo de los refugios asociados a cada tortuga se armaron redes 
+bipartitas de refugios y tortugas. Utilizando las proyecciones de los grafos 
+bipartitos como predictores de enlaces en la red de encuentros, se encontró 
+que para los datos de los tortugómetros las métricas recall, precisión y 
+accuracy no son mayores que lo esperado para el caso del uso aleatorio de los
+refugios. En cambio, para los datos de i-gotU, se observa que las métricas 
+son mayores a las 
+esperadas por uso de refugios aleatorios, pero se están monitoreando solo 6 
+tortugas y únicamente se encontraron 2 refugios compartidos entre las 
+tortugas. Dada la escasa cantidad de datos, no se puede aún afirmar 
+si las proyecciones en la red bipartita nos dan una buena predicción de la 
+red de 
+encuentros. En el caso en que el uso compartido de un refugio esté relacionado
+efectivamente con el encuentro de las mismas tortugas durante los días 
+anteriores o posteriores,
+podría ser un indicador de que las tortugas tienen memoria, un aspecto muy poco
+estudiado en el caso de los reptiles.}
+ 
+\item{Además, se compararon las topologías de las redes proyectadas en nodos 
+tortugas con las redes de encuentros. Se observa que las redes bipartitas de 
+refugios y tortugas tienen una topología similar a la red de encuentros, pero 
+con una menor cantidad de enlaces y tampoco presentan diferencias 
+significativas con respecto al uso aleatorio de refugios. En un futuro se 
+analizará este resultado con una mayor cantidad de tortugas donde se 
+disponga la misma cantidad de datos de refugios que de días de medición 
+(condición que actualmente no se cumple para los datos del tortugómetro).}
+ 
+\item{Sobre las redes bipartitas de nodos tortugas y refugios, se realizaron 
+proyecciones en nodos refugios y se encontró que las matrices de adyacencia 
+están fuertemente correlacionadas con la matrices de distancias. Los resultados 
+del test de Mantel con 10000 permutaciones aleatorias indican que la tortuga
+que visita un dado refugio, tiene una probabilidad mayor de visitar refugios
+cercanos.}
+
+\item{A partir de los resultados mencionados, se decidió realizar 
+en la próxima campaña, un mayor 
+esfuerzo de seguimiento de los individuos que participaron de los 
+encuentros  detectados. De esta forma se busca entender si la no 
+repetición de encuentros entre tortugas se debe a la poca cantidad 
+de muestras o a una característica de la especie. Este resultado 
+sería muy novedoso dado que está relacionado con la capacidad de 
+memoria de las tortugas, un aspecto muy poco estudiado hasta el 
+momento.} 
+\end{itemize} 
+
+
  
  
-Se definieron dos criterios para determinar el refugio donde pasó la noche la tortuga, uno para cada metodología de medición. Reconociendo las limitaciones de estos criterios, se decidió para las próximas campañas de medición aumentar las franja horaria de medición para los datos de i-gotU, de esta manera garantizar la ubicación de la tortuga en el refugio nocturno. Para el caso del tortugómetro se decidió añadir una etiqueta si la tortuga se encuentra en su refugio nocturno a la hora de recuperar el dispositivo en ese día de medición.
  
-Con los refugios ya identificados, se definió una métrica para determinar la distribución espacial de los refugios en tortugas machos y hembras. Se observó que no presentan diferencias significativas entre machos y hembras, de todas maneras, el criterio utilizado para determinar un refugio para datos del tortugometro filtra muchos días de medición donde se le quitó el tortugómetro previo a las 20 horas. Por otro lado, los datos de i-gotU (donde tenemos una gran cantidad de refugios registrados) están tomados en los meses de enero-mayo, donde se espera una menor actividad de las tortugas machos (pasada época de apareamiento)\cite{Erika}.
- 
-Se identificaron en los refugios monitoreados por los i-gotU, donde tenemos días consecutivos de medición, la existencia de refugios preferidos (Fig. \ref{fig:refugios_preferidos}) donde la tortuga pasa la mayoría de las noches. En 4 de 6 tortugas monitoreados con metodología i-gotU, se encontró que realizan caminatas desde el refugio preferido hasta otro refugio nocturno y luego vuelven al refugio preferido. Un ejemplo de este último es la tortuga T54, en la red que manifiesta los caminos tomados (Fig. \ref{fig:ruta_refus_T54}), se observa que la tortuga  toma varias caminatas a otros refugios nocturnos y luego vuelve a alguno de sus dos refugios preferidos. Caracterizar estos refugios preferidos puede ser útil para diseñar políticas de conservación y puede además contribuir a la caracterización del movimiento, tanto para modelos matemáticos como simulaciones numéricas.
- 
-Partiendo de los refugios asociados a cada tortuga se armaron redes bipartitas de refugios y tortugas (Figs. \ref{fig:red_bipartita_refus_campanas} y \ref{fig:red_bipartita_refus_igotu}). Utilizando las proyecciones de los grafos bipartitos como predictor de enlaces en la red de encuentros, se encontró que para los datos de los tortugometros las métricas recall, precisión y accuracy no son mayores de lo esperado por uso de refugios aleatorio (tabla \ref{tab:metricas_comparacion_redes_aleatorias}). Para los datos de i-gotU, se observa que las métricas son mayores a las esperadas por uso de refugios aleatorios, pero se están monitoreando solo 6 tortugas y únicamente se encontraron 2 refugios compartidos entre las tortugas. Por poca cantidad de datos, no se puede aún afirmar si las proyecciones en la red bipartita nos dan una predicción de la red de encuentros.
- 
-Además, se compararon las topologías de las redes proyectadas en nodos tortugas con las redes de encuentros (tabla \ref{tab:metricas_topologia_redes}). Se observa que las redes bipartitas de refugios y tortugas tienen una topología similar a la red de encuentros, pero con una menor cantidad de enlaces y tampoco presentan diferencias significativas respecto el uso aleatorio de refugios.  En un futuro se analizará este razonamiento con una mayor cantidad de tortugas donde se disponga la misma cantidad de datos de refugios que de días de medición (condición que actualmente no se cumple para los datos del tortugometro).
- 
-Sobre las redes bipartitas de nodos tortugas y refugios, se realizaron proyecciones en nodos refugios (Figs. \ref{fig:red_bipartita_refus_campanas} y \ref{fig:red_bipartita_refus_igotu}) y se encontró que las matrices de adyacencia están fuertemente correlacionadas con la matrices de distancias. Se obtuvo un p-valor de 0.0051 y 0.0001, para los datos de los tortugometros y los i-gotU respectivamente, al realizar mantel tests con 10000 permutaciones aleatorias. Es decir que la tortuga que visita un refugio, tiene una probabilidad mayor de visitar refugios cercanos a este, como se observa en la Fig. \ref{fig:mapa_con_conexiones_igotu}.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-%A partir de los resultados de este estudio, se decidió realizar en la próxima campaña un mayor esfuerzo de seguimiento de los individuos que participaron de los encuentros  detectados. De esta forma se busca entender si la no repetición de encuentros entre tortugas se debe a la poca cantidad de muestras o a una característica de la especie. Este resultado sería muy novedoso dado que está relacionado con la capacidad de memoria de las tortugas, un aspecto muy poco estudiado hasta el momento.
+
  
  
  
